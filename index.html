@@ -1,227 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anusha Agarwal | Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Anusha Agarwal | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-body{
-  background:linear-gradient(120deg,#fdfbfb,#ebedee);
-  font-family:'Poppins',sans-serif;
-  color:#1f2937;
-}
+    body {
+      background: linear-gradient(135deg, #fff1eb, #e0f7fa);
+      color: #333;
+      line-height: 1.6;
+    }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
-}
+    section {
+      padding: 70px 10%;
+    }
 
-/* CODE HERO */
-.code-box{
-  background:#ffffff;
-  border-radius:20px;
-  padding:35px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.1);
-  font-family:'Fira Code',monospace;
-  position:relative;
-}
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      color: #a855f7;
+    }
 
-.code-dot{
-  position:absolute;
-  top:15px;
-  left:20px;
-  display:flex;
-  gap:8px;
-}
+    /* INTRO */
+    .intro-box {
+      background: white;
+      border-radius: 18px;
+      padding: 60px 40px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
 
-.dot{
-  width:12px;
-  height:12px;
-  border-radius:50%;
-}
+    .intro-box h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.red{background:#ff5f56;}
-.yellow{background:#ffbd2e;}
-.green{background:#27c93f;}
+    .intro-box p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #6b7280;
+    }
 
-.code-line{
-  margin:8px 0;
-}
+    .buttons {
+      margin-top: 30px;
+    }
 
-.keyword{color:#7c3aed;}
-.string{color:#16a34a;}
-.comment{color:#9ca3af;}
-.variable{color:#2563eb;}
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      transition: transform 0.2s ease;
+    }
 
-/* SECTIONS */
-section{
-  margin-top:70px;
-}
+    .buttons a:hover {
+      transform: translateY(-3px);
+    }
 
-section h2{
-  font-size:2rem;
-  text-align:center;
-  margin-bottom:30px;
-  background:linear-gradient(90deg,#ff6ec4,#7873f5);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+    /* FLOW */
+    .flow {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-/* FLOWCHART */
-.flowchart{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  gap:20px;
-}
+    .flow-box {
+      background: linear-gradient(135deg, #c4b5fd, #93c5fd);
+      padding: 18px 28px;
+      border-radius: 30px;
+      font-weight: 500;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
 
-.box{
-  background:linear-gradient(135deg,#e0c3fc,#8ec5fc);
-  padding:18px 25px;
-  border-radius:18px;
-  font-weight:600;
-  box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
+    /* SKILLS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
 
-.arrow{
-  font-size:30px;
-  color:#7c3aed;
-}
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
 
-/* DIAGRAM */
-.diagram{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
+    .card h3 {
+      color: #6366f1;
+      margin-bottom: 10px;
+    }
 
-.card{
-  background:white;
-  border-radius:22px;
-  padding:25px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.1);
-}
+    /* PROJECTS */
+    .project {
+      background: linear-gradient(135deg, #fbcfe8, #bfdbfe);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
 
-.card h3{
-  margin-bottom:10px;
-  color:#7c3aed;
-}
-
-/* BUTTONS */
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  flex-wrap:wrap;
-  margin-top:40px;
-}
-
-.btn{
-  padding:14px 26px;
-  border-radius:30px;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  color:white;
-  transition:0.3s;
-}
-
-.github{background:linear-gradient(135deg,#6a11cb,#2575fc);}
-.linkedin{background:linear-gradient(135deg,#0077b5,#00c6ff);}
-.email{background:linear-gradient(135deg,#ff512f,#f09819);}
-
-.btn:hover{
-  transform:translateY(-4px) scale(1.05);
-  box-shadow:0 12px 25px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer{
-  margin-top:80px;
-  text-align:center;
-  color:#6b7280;
-  font-size:14px;
-}
-</style>
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
 
-<!-- CODE INTRO -->
-<div class="code-box">
-  <div class="code-dot">
-    <div class="dot red"></div>
-    <div class="dot yellow"></div>
-    <div class="dot green"></div>
-  </div>
+  <!-- INTRO -->
+  <section>
+    <div class="intro-box">
+      <h1>Hi! My name is Anusha Agarwal</h1>
+      <p>Computer Science Student • Coding • Databases • Web Development</p>
 
-  <div class="code-line"><span class="comment">// Portfolio Intro</span></div>
-  <div class="code-line"><span class="keyword">const</span> <span class="variable">name</span> = <span class="string">"Anusha Agarwal"</span>;</div>
-  <div class="code-line"><span class="keyword">const</span> <span class="variable">role</span> = <span class="string">"Computer Science Student"</span>;</div>
-  <div class="code-line"><span class="keyword">function</span> <span class="variable">aboutMe</span>() {</div>
-  <div class="code-line">&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"I love coding, databases & web development"</span>;</div>
-  <div class="code-line">}</div>
-</div>
-
-<!-- FLOWCHART -->
-<section>
-  <h2>Learning Flow</h2>
-  <div class="flowchart">
-    <div class="box">Learn Concepts</div>
-    <div class="arrow">➡</div>
-    <div class="box">Write Code</div>
-    <div class="arrow">➡</div>
-    <div class="box">Build Projects</div>
-    <div class="arrow">➡</div>
-    <div class="box">Improve Skills</div>
-  </div>
-</section>
-
-<!-- DIAGRAMS -->
-<section>
-  <h2>What I Work With</h2>
-  <div class="diagram">
-    <div class="card">
-      <h3>Frontend</h3>
-      <p>HTML, CSS, Responsive Design, UI Basics</p>
+      <div class="buttons">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:example@gmail.com">Email</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>Backend Logic</h3>
-      <p>Python, problem solving, algorithms</p>
+  </section>
+
+  <!-- LEARNING FLOW -->
+  <section>
+    <h2>Learning Flow</h2>
+    <div class="flow">
+      <div class="flow-box">Learn Concepts</div>
+      <div class="flow-box">Write Code</div>
+      <div class="flow-box">Build Projects</div>
+      <div class="flow-box">Improve Skills</div>
     </div>
-    <div class="card">
-      <h3>Database</h3>
-      <p>SQL, ER Diagrams, Normalization</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>What I Work With</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+      <div class="card">
+        <h3>Backend</h3>
+        <p>Python, SQL, Logic Building</p>
+      </div>
+      <div class="card">
+        <h3>Database</h3>
+        <p>MySQL, Oracle, DBMS</p>
+      </div>
+      <div class="card">
+        <h3>Tools</h3>
+        <p>GitHub, VS Code</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BUTTONS -->
-<div class="buttons">
-  <a class="btn github" href="https://github.com/aanushaagar-rgb" target="_blank">GitHub</a>
-  <a class="btn linkedin" href="#">LinkedIn</a>
-  <a class="btn email" href="mailto:yourmail@gmail.com">Email</a>
-</div>
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="project">
+        <h3>Student Database System</h3>
+        <p>SQL-based project for managing student records.</p>
+      </div>
+      <div class="project">
+        <h3>Python Mini Projects</h3>
+        <p>Programs on logic building and problem solving.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>This responsive website hosted on GitHub Pages.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2026 Anusha Agarwal • Code • Create • Grow
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Anusha Agarwal • Built with 💜 & GitHub Pages
+  </footer>
 
-</div>
 </body>
 </html>
+
 
 
 
