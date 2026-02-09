@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -32,42 +32,34 @@
 
     /* Header */
     .header {
-      display: flex;
-      align-items: center;
-      gap: 30px;
       background: #020617;
-      padding: 30px;
+      padding: 40px;
       border-radius: 16px;
+      text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
-    .header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #38bdf8;
-    }
-
     .header h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
     }
 
     .header p {
       color: #94a3b8;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     .buttons {
-      margin-top: 15px;
+      margin-top: 20px;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .btn {
-      padding: 8px 14px;
+      padding: 10px 16px;
       background: #1e293b;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 14px;
       transition: 0.3s;
     }
@@ -91,7 +83,7 @@
 
     .card {
       background: #020617;
-      padding: 20px;
+      padding: 22px;
       border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
@@ -100,12 +92,12 @@
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .skill {
       background: #1e293b;
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: 20px;
       font-size: 14px;
     }
@@ -133,9 +125,8 @@
     }
 
     @media (max-width: 768px) {
-      .header {
-        flex-direction: column;
-        text-align: center;
+      .header h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -146,17 +137,14 @@
 
     <!-- Header -->
     <div class="header">
-      <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile">
-      <div>
-        <h1>Anusha Agarwal</h1>
-        <p>Computer Science Student | Python | Web Development</p>
+      <h1>Anusha Agarwal</h1>
+      <p>Computer Science Student | Python | Web Development</p>
 
-        <div class="buttons">
-          <a class="btn" href="https://github.com/aanushaagar-rgb" target="_blank">GitHub</a>
-          <a class="btn" href="#" target="_blank">LinkedIn</a>
-          <a class="btn" href="mailto:yourmail@gmail.com">Email</a>
-          <a class="btn" href="#">Resume</a>
-        </div>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/aanushaagar-rgb" target="_blank">GitHub</a>
+        <a class="btn" href="#" target="_blank">LinkedIn</a>
+        <a class="btn" href="mailto:yourmail@gmail.com">Email</a>
+        <a class="btn" href="#">Resume</a>
       </div>
     </div>
 
@@ -165,9 +153,9 @@
       <h2>About Me</h2>
       <div class="card">
         <p>
-          I am a passionate Computer Science student interested in
-          Python, Databases, and Web Development. I enjoy learning new
-          technologies and building practical projects.
+          I am a passionate Computer Science student with interests in
+          Python, Databases, and Web Development. I enjoy building
+          projects and learning new technologies.
         </p>
       </div>
     </section>
